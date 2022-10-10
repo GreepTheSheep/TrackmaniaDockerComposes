@@ -1,0 +1,15 @@
+!Database/
+Database/*
+!Database/.gitkeep
+
+!UserData/
+UserData/*
+
+!UserData/Maps
+!UserData/Maps/MatchSettings
+UserData/Maps/MatchSettings/*
+!UserData/Maps/MatchSettings/example.txt
+
+!UserData/Config
+UserData/Config/*
+!UserData/Config/dedicated_cfg.default.txt

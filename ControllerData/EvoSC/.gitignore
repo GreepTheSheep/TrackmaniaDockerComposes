@@ -1,0 +1,7 @@
+!config/
+config/*
+!config/.gitkeep
+
+!modules/
+modules/*
+!modules/.gitkeep

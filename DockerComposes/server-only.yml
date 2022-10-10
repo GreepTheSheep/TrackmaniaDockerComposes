@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  trackmania:
+    image: evotm/trackmania:${SERVER_VERSION}
+    restart: always
+    ports:
+      - ${SERVER_PORT}:2350/tcp
+      - ${SERVER_PORT}:2350/udp
+    volumes:
+      - ./${USERDATA_DIR}:/server/UserData
+    environment:
+      DEDICATED_CFG: ${DEDICATED_CFG}
+      GAME_SETTINGS: ${GAME_SETTINGS}
