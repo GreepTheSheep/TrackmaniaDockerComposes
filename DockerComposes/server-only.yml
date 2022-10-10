@@ -7,7 +7,7 @@ services:
       - ${SERVER_PORT}:2350/tcp
       - ${SERVER_PORT}:2350/udp
     volumes:
-      - ./${USERDATA_DIR}:/server/UserData
+      - ../${USERDATA_DIR}:/server/UserData
     environment:
       DEDICATED_CFG: ${DEDICATED_CFG}
       GAME_SETTINGS: ${GAME_SETTINGS}

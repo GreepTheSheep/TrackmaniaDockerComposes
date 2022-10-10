@@ -9,7 +9,7 @@ services:
     expose:
       - "5000"
     volumes:
-      - ./${USERDATA_DIR}:/server/UserData
+      - ../${USERDATA_DIR}:/server/UserData
     environment:
       DEDICATED_CFG: ${DEDICATED_CFG}
       GAME_SETTINGS: ${GAME_SETTINGS}
@@ -20,7 +20,7 @@ services:
       MARIADB_DATABASE: evosc
       MARIADB_ROOT_PASSWORD: EvoSCDatabase
     volumes:
-      - ./Database:/var/lib/mysql
+      - ../Database:/var/lib/mysql
     expose:
       - "3306"
   phpmyadmin:
@@ -51,6 +51,6 @@ services:
       RPC_PASSWORD: SuperAdmin
       GAME_SETTINGS: ${GAME_SETTINGS}
     volumes:
-      - ./${USERDATA_DIR}:/server/UserData
-      - ./ControllerData/EvoSC/config:/controller/config
-      - ./ControllerData/EvoSC/modules:/controller/modules
+      - ../${USERDATA_DIR}:/server/UserData
+      - ../ControllerData/EvoSC/config:/controller/config
+      - ../ControllerData/EvoSC/modules:/controller/modules

@@ -9,7 +9,7 @@ services:
     expose:
       - "5000"
     volumes:
-      - ./${USERDATA_DIR}:/server/UserData
+      - ../${USERDATA_DIR}:/server/UserData
     environment:
       DEDICATED_CFG: ${DEDICATED_CFG}
       GAME_SETTINGS: ${GAME_SETTINGS}
@@ -20,7 +20,7 @@ services:
       MARIADB_DATABASE: pyp
       MARIADB_ROOT_PASSWORD: PyPlaDatabase
     volumes:
-      - ./Database:/var/lib/mysql
+      - ../Database:/var/lib/mysql
     expose:
       - "3306"
   phpmyadmin:
@@ -52,5 +52,5 @@ services:
       GAME_SETTINGS: ${GAME_SETTINGS}
       PYPLANET_OWNER: ${OWNER_LOGIN}
     volumes:
-      - ./${USERDATA_DIR}:/server/UserData
-      - ./ControllerData/PyPlanet:/app/server/
+      - ../${USERDATA_DIR}:/server/UserData
+      - ../ControllerData/PyPlanet:/app/server/
