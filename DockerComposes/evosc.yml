@@ -11,6 +11,7 @@ services:
     volumes:
       - ../${USERDATA_DIR}:/server/UserData
     environment:
+      XMLRPC_ALLOWREMOTE: True
       DEDICATED_CFG: ${DEDICATED_CFG}
       GAME_SETTINGS: ${GAME_SETTINGS}
   mariadb:
