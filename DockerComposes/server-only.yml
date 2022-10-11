@@ -9,5 +9,8 @@ services:
     volumes:
       - ../${USERDATA_DIR}:/server/UserData
     environment:
+      MASTER_LOGIN: ${MASTER_LOGIN}
+      MASTER_PASSWORD: ${MASTER_PASSWORD}
       DEDICATED_CFG: ${DEDICATED_CFG}
       GAME_SETTINGS: ${GAME_SETTINGS}
+      FORCE_IP_ADDRESS: ${FORCE_IP}:${SERVER_PORT}
