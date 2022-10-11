@@ -10,7 +10,9 @@ Docker Compose files with Trackmania server with any Server Controllers
     - Copy `Maps/MatchSettings/example.txt` to `Maps/MatchSettings/tracklist.txt` or any else
     - Don't forget to add tracks to the `Maps` directory using https://trackmania.exchange
 3) Edit your .env file to match with your desired settings
-4) On this folder, run `docker compose -f [YOUR COMPOSE FILE] up`
+4) On Linux, don't forget to enable write access for others to `UserData` and `ControllerData` if not enabled
+    - `chmod o+w -R UserData ControllerData`
+5) On this folder, run `docker compose -f [YOUR COMPOSE FILE] up`
 
 ## Credits
 
