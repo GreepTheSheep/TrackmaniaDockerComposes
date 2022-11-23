@@ -37,7 +37,7 @@ services:
     depends_on:
       - mariadb
   pyplanet:
-    image: greep/pyplanet
+    image: uzurka/pyplanet-docker
     restart: always
     depends_on:
       - trackmania
@@ -47,13 +47,12 @@ services:
       DB_NAME: ${DATABASE_NAME}
       DB_USER: root
       DB_PASSWORD: ${DATABASE_ROOT_PASSWORD}
-      RPC_IP: trackmania
-      RPC_PORT: 5000
-      RPC_LOGIN: SuperAdmin
-      RPC_PASSWORD: SuperAdmin
+      DEDICATED_HOST: trackmania
+      DEDICATED_PORT: 5000
+      DEDICATED_USER: SuperAdmin
+      DEDICATED_PASSWORD: SuperAdmin
       GAME_SETTINGS: ${GAME_SETTINGS}
       PYPLANET_OWNER: ${OWNER_LOGIN}
     volumes:
-      - ../${USERDATA_DIR}:/server/UserData
-      - ../ControllerData/PyPlanet/base.py:/server/controller/pyp/settings/base.py
-      - ../ControllerData/PyPlanet/apps.py:/server/controller/pyp/settings/apps.py
+      - ../ControllerData/PyPlanet/base.py:/app/server/settings/base.py
+      - ../ControllerData/PyPlanet/apps.py:/app/server/settings/apps.py
