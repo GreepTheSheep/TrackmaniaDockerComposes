@@ -17,4 +17,4 @@ Docker Compose files with Trackmania server with any Server Controllers
 ## Credits
 
 - [Evo](https://github.com/evotm) for managing the [Trackmania](https://github.com/EvoTM/docker-trackmania) and the [EvoSC](https://github.com/EvoTM/docker-evosc) Docker images
-- Myself (Greep) for managing the [PyPlanet](https://github.com/GreepTheSheep/docker-pyplanet) image
+- Uzurka for managing the [PyPlanet](https://hub.docker.com/r/Uzurka/pyplanet-docker) image
